@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.1.1")     
+    }
+}
+
+plugins {
+    id 'java'
+    id 'eclipse'
+    id 'idea'
+}                     
+
+dependencies {
+	runtimeOnly 'org.projectlombok:lombok:1.18.4'            
+    implementation 'junit:junit:4.12' 
+    implementation 'org.assertj:assertj-core:1.7.0'
+    implementation 'org.slf4j:slf4j-simple:1.7.7'
+    implementation 'net.serenity-bdd:serenity-core:1.9.9'
+    implementation 'net.serenity-bdd:serenity-junit:1.9.9'
+    implementation 'net.serenity-bdd:serenity-cucumber:1.9.5'
+    implementation 'net.serenity-bdd:serenity-screenplay:1.9.9'
+    implementation 'net.serenity-bdd:serenity-screenplay-webdriver:1.9.9'
+    implementation 'org.apache.commons:commons-lang3:3.1'             
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+} 
+
+gradle.startParameter.continueOnFailure = true 
